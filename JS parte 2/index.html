@@ -162,12 +162,36 @@
       a variável. // let name, age, address; // name = "Diogo"; //
       console.log("name", name); // "vai retornar NAME DIOGO no console"
     </p>
+    <h3>Concatenação e interpolação</h3>
+    <p></p>
   </body>
   <script>
-    // let name, age, address;
+    // let name, age, address, number;
 
     // name = "Diogo";
+    // (age = 39), (address = "Rua tiradentes"), (number = 143);
 
     // console.log("name", name);
+    // console.log("age", age);
+    // console.log("address", address);
+    // console.log("number", number);
+
+    let name, age;
+
+    (name = "Pedro"), (age = 22);
+    address = {
+      street: "Rua Central",
+      city: "São José dos Campos",
+    };
+
+    // Concatenação (antiga)
+    console.log(
+      name + " tem " + age + " anos. E reside em " + JSON.stringify(address)
+    );
+
+    // interpolação (novo)
+    console.log(
+      `${name} tem ${age} anos. E reside em ${JSON.stringify(address)}`
+    );
   </script>
 </html>
