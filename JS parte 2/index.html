@@ -163,7 +163,27 @@
       console.log("name", name); // "vai retornar NAME DIOGO no console"
     </p>
     <h3>Concatenação e interpolação</h3>
-    <p></p>
+    <p>
+      let name, age; (name = "Pedro"), (age = 22); address = { street: "Rua
+      Central", city: "São José dos Campos", }; // Concatenação (antiga)
+      console.log( name + " tem " + age + " anos. E reside em " +
+      JSON.stringify(address) ); // interpolação (novo) console.log( `${name}
+      tem ${age} anos. E reside em ${JSON.stringify(address)}` );
+    </p>
+    <h3>Object</h3>
+    <p>
+      Para variáveis do tipo "const" não se pode atribuir mais de um valor ou
+      trocar o valor. Mas quando estamos falando em variáveis "const" do tipo
+      "object" e "array" podemos reatribuir valores. Os objetos são bem
+      flexiveis e tem uma gama de utilização. Através do conceito de object é
+      que a gente constroi APIs, Rest, consulda de banco de dados, pois sempre
+      retornam um objeto que a jente pode acessar as suas propriedades. const
+      person = { name: "Diogo", age: 40, address: { street: "Av. Central", city:
+      "São Jose dos Campos", }, }; person.name = "Pedro"; person.hairColor =
+      "Black"; console.log(person); console.log(person.name);
+      console.log(person.age); console.log( `${person.name} tem ${person.age}
+      anos e reside na cidade de ${person.address.city}.` );
+    </p>
   </body>
   <script>
     // let name, age, address, number;
@@ -176,22 +196,42 @@
     // console.log("address", address);
     // console.log("number", number);
 
-    let name, age;
+    // let name, age;
 
-    (name = "Pedro"), (age = 22);
-    address = {
-      street: "Rua Central",
-      city: "São José dos Campos",
+    // (name = "Pedro"), (age = 22);
+    // address = {
+    //   street: "Rua Central",
+    //   city: "São José dos Campos",
+    // };
+
+    // // Concatenação (antiga)
+    // console.log(
+    //   name + " tem " + age + " anos. E reside em " + JSON.stringify(address)
+    // );
+
+    // // interpolação (novo)
+    // console.log(
+    //   `${name} tem ${age} anos. E reside em ${JSON.stringify(address)}`
+    // );
+
+    const person = {
+      name: "Diogo",
+      age: 40,
+      address: {
+        street: "Av. Central",
+        city: "São Jose dos Campos",
+      },
     };
 
-    // Concatenação (antiga)
-    console.log(
-      name + " tem " + age + " anos. E reside em " + JSON.stringify(address)
-    );
+    person.name = "Pedro";
+    person.hairColor = "Black";
 
-    // interpolação (novo)
+    console.log(person);
+    console.log(person.name);
+    console.log(person.age);
+
     console.log(
-      `${name} tem ${age} anos. E reside em ${JSON.stringify(address)}`
+      `${person.name} tem ${person.age} anos e reside na cidade de ${person.address.city}.`
     );
   </script>
 </html>
