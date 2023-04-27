@@ -282,6 +282,56 @@
     <p>
       Programação procedural, programa lê o código como se estivesse lendo um livro,
       da esquerda para a direita e de cima para baixo.
+      MICRODECISÕES: são decisões bem mensuradas.
+      se(consição verdadeira)faz algo
+      senão() faz outro
+      <img src="./assets/Fluxo de um programa.png" alt="">
+      <img src="./assets/Bloco básico de decisão.png" alt="">
+      <img src="./assets/If.png" alt="">
+      <img src="./assets/comparações.png" alt="">
+    </p>
+    <h1>IF é o SE dentro do JavaScript</h1>
+    <p>
+      - O IF no JavaScript cria um desvio no contexto de execução.
+      - Tudo que estiver dentro do sparenteses o if vai executar.
+      - Tudo que for verdadeiro vai ser executado.
+      - Lembrando que se o IF for falso o programa não executa o IF e segue o fluxo normal.
+      <img src="./assets/If.png" alt="">
+      <img src="./assets/IF Ex_1.png" alt="">
+    </p>
+    <h1>IF ELSE</h1>
+    <p>
+      IF ou SE - executa a função quando a condição for verdadeiro
+      ELSE ou SENÃO - executa a função quando a condição for falsa
+      <img src="./assets/else if.png" alt="">
+    </p>
+    <h1>ELSE IF</h1>
+    <p>
+      - Utilizado para expandir o IF - ELSE
+    </p>
+    <h1>TERNÁRIO</h1>
+    <p>
+      - necessita que seja usado o IF e o ELSE
+      ex: na linha 452
+      <img src="./assets/TERNARIO.png" alt="">
+      <img src="./assets/RESULTADO TERNARIO.png" alt="">
+    </p>
+    <h1>Estrutura de decisão com SWITCH-CASE</h1>
+    <p>
+      - Faz uma comparação simples compadado com o if e else.
+      - So consegue fazer uma analise por igualdade e não complexa.
+      - Não conseguimos definir valor maior > valor menor < valores diferentes e sim sempre
+      com esse tipo de condição. EX: Ura de atendimento, compras digite 1, vendas digite 2 etc.
+      - Pode trabalhar com números, letras, true, false;
+      - Switch case é mais performático que o if.
+      <img src="./assets/switch case.png" alt="">
+    </p>
+    <h1>TRY CATCH</h1>
+    <p>
+      - seria o IF dos erros para quando precisar executar alguma coisa que tem comunicação
+      externa: consulta de API, Banco de Dados, arquivos...
+      TRY - utilizado para fazer qualquer serviço externo.
+      CATCH - é o else do if.
     </p>
   </body>
   <script>
@@ -343,21 +393,112 @@
     //const persons = ["Felipe", "Ana", "Paulo"];
 
     //Array + Object
-    const persons = [
-      { name: "Felipe", age: 40 },
-      { name: "Ana", age: 35 },
-      { name: "Paulo", age: 22 },
-      //"zé", //não seria uma boa prática (misturar tipos dentro do array).
-    ];
+    // const persons = [
+    //   { name: "Felipe", age: 40 },
+    //   { name: "Ana", age: 35 },
+    //   { name: "Paulo", age: 22 },
+    //   //"zé", //não seria uma boa prática (misturar tipos dentro do array).
+    // ];
 
-    persons[0] = "Zé"; //neste caso estamos forçando o valor "Zé" para entra na primeira posição
+    // persons[0] = "Zé"; //neste caso estamos forçando o valor "Zé" para entra na primeira posição
     // persons [999] = "Zé" // não seria uma boa prática (esta fora do rande dos indices)
 
-    console.log(persons[0]);
-    console.log(persons[1]);
-    console.log(persons[2]);
-    console.log(persons[3]);
+    // console.log(persons[0]);
+    // console.log(persons[1]);
+    // console.log(persons[2]);
+    // console.log(persons[3]);
 
-    console.log(persons.length);
+    // console.log(persons.length);
+
+    // console.log("inicio do programa")
+
+    // //IF
+    // if (false) {
+    //   console.log("verdadeiro")
+    // } else {
+    //   console.log("falso")
+    // }
+
+    // if ("1" == 2) {
+    //   console.log("verdadeiro")
+    // } else {
+    //   console.log("falso")
+    // }
+
+    // if(1 === 2) {
+    //   console.log("verdadeiro")
+    // } else {
+    //   console.log("falso")
+    // }
+
+    // if("1" !== 1) {
+    //   console.log("verdadeiro")
+    // } else {
+    //   console.log("falso")
+    // }
+
+    // if(1 < 2 && 2 < 3) {
+    //   console.log("verdadeiro")
+    // } else {
+    //   console.log("falso")
+    // }
+    // if(!(1 < 2) && !(2 < 3)) {
+    //   console.log("verdadeiro")
+    // } else {
+    //   console.log("falso")
+    // }
+
+    // console.log("fim do programa")
+
+
+
+
+    // const valor = 30
+
+    // if(valor <= 1) {
+    //   console.log("condição 1")
+    // } else if (valor > 1 && valor <= 2) {
+    //   console.log("condição 2")
+    // } else if (valor > 2 && valor <= 3) {
+    //   console.log("consição 3")
+    // } else {
+    //   console.log("condição outra")
+    // }
+    
+
+    // if (texto == "A") {
+      //Valor = 10
+    //} else {
+     // valor = 20
+    //}
+    
+    // let texto = "A"
+    //   let valor
+
+    //   //variavel = (condição) ? IF : ELSE
+    //   valor = texto == "A" ? 10 : 0
+    //   console.log("Nota", valor)
+
+    //   //execução de comando via ternário
+    //   texto == "A" ? console.log("SE") : console.log("SENÃO")
+
+    let variavel = 1
+
+    switch (variavel) {
+      case 1:
+      console.log("condição 1")
+        break;
+        case 2:
+      console.log("condição 2")
+        break;
+        case 3:
+      console.log("condição 3")
+        break;
+    
+      default:
+        console.log("condição default")
+        break;
+    }
+
   </script>
 </html>
