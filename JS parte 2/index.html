@@ -342,6 +342,17 @@
       - Enquanto a condição for verdadeira o programa continua executando.
       - No while ou enquanto o programa fica no loop ate que a condição seja falsa.
     </p>
+    <h1>FOR</h1>
+    <p>Podemos executar infinitas vezes a condição até que a condição de parada seja alcançada.
+      O FOR tem a estrutura do while, mas permite mais condições dentro sa função.
+      For possui uma estrutura do while, mas de uma forma mais enxuta.
+      <img src="./assets/for.png" alt="">
+      <img src="./assets/for contador reverso.png" alt="">
+    </p>
+    <h1>FOR OF</h1>
+    <p>
+      FOR OF - 
+    </p>
   </body>
   <script>
     // let name, age, address, number;
@@ -509,22 +520,35 @@
     //     break;
     // }
 
-    try {
-      //executa algo...
-      //consulta de API, Banco de Dados, arquivos...
-      console.log("Consultando o banco de dados")
-      // con.select("clientes") // ponto de falha
-      // throw "Erro 1032 ao conectar com o banco de dados."   // dispara o catch("erro").
-      console.log("Outro comando...")
-    } catch (error) {
-      //obs: nunca deixar o catch vazio
-      //erro
-      //alert("Erro de execução genérico. Por favor, fale com o suporte.")
-      //console.error(error)
-      console.error(error)
-    } finally {
-      // sempre executa ao final (opcional)
-      console.log("execução final")
+    // try {
+    //   //executa algo...
+    //   //consulta de API, Banco de Dados, arquivos...
+    //   console.log("Consultando o banco de dados")
+    //   // con.select("clientes") // ponto de falha
+    //   // throw "Erro 1032 ao conectar com o banco de dados."   // dispara o catch("erro").
+    //   console.log("Outro comando...")
+    // } catch (error) {
+    //   //obs: nunca deixar o catch vazio
+    //   //erro
+    //   //alert("Erro de execução genérico. Por favor, fale com o suporte.")
+    //   //console.error(error)
+    //   console.error(error)
+    // } finally {
+    //   // sempre executa ao final (opcional)
+    //   console.log("execução final")
+    // }
+
+    // let contador = 1
+    // while (contador <= 10) {
+    //   console.log(`executando ${contador}`)
+    //   condição++
+    // }
+
+    for (let i = 10; i >= 1; i--) {
+      console.log(i)
+      
     }
+
+    console.log("Fim do programa")
   </script>
 </html>
