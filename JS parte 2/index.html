@@ -326,12 +326,14 @@
       - Switch case é mais performático que o if.
       <img src="./assets/switch case.png" alt="">
     </p>
-    <h1>TRY CATCH</h1>
+    <h1>TRY CATCH Integração </h1>
     <p>
-      - seria o IF dos erros para quando precisar executar alguma coisa que tem comunicação
+      TRY - seria o IF dos erros para quando precisar executar alguma coisa que tem comunicação
       externa: consulta de API, Banco de Dados, arquivos...
-      TRY - utilizado para fazer qualquer serviço externo.
+      TRY - utilizado para fazer qualquer serviço (comunicação) externo.
       CATCH - é o else do if.
+       - nunca deixar o catch vazio.
+       <img src="./assets/try e catch e finally.png" alt="">
     </p>
   </body>
   <script>
@@ -482,23 +484,40 @@
     //   //execução de comando via ternário
     //   texto == "A" ? console.log("SE") : console.log("SENÃO")
 
-    let variavel = 1
+    // let variavel = 1
 
-    switch (variavel) {
-      case 1:
-      console.log("condição 1")
-        break;
-        case 2:
-      console.log("condição 2")
-        break;
-        case 3:
-      console.log("condição 3")
-        break;
+    // switch (variavel) {
+    //   case 1:
+    //   console.log("condição 1")
+    //     break;
+    //     case 2:
+    //   console.log("condição 2")
+    //     break;
+    //     case 3:
+    //   console.log("condição 3")
+    //     break;
     
-      default:
-        console.log("condição default")
-        break;
-    }
+    //   default:
+    //     console.log("condição default")
+    //     break;
+    // }
 
+    try {
+      //executa algo...
+      //consulta de API, Banco de Dados, arquivos...
+      console.log("Consultando o banco de dados")
+      // con.select("clientes") // ponto de falha
+      // throw "Erro 1032 ao conectar com o banco de dados."   // dispara o catch("erro").
+      console.log("Outro comando...")
+    } catch (error) {
+      //obs: nunca deixar o catch vazio
+      //erro
+      //alert("Erro de execução genérico. Por favor, fale com o suporte.")
+      //console.error(error)
+      console.error(error)
+    } finally {
+      // sempre executa ao final (opcional)
+      console.log("execução final")
+    }
   </script>
 </html>
